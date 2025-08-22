@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيرة الذاتية</title>
+    <!-- <link rel="stylesheet" href="CSS/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="CSS/normlize.css"> -->
+    <!-- <link rel="stylesheet" href="CSS/main.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        @media screen {
+            :root {
+                --main-color: white;
+                --main-back-color: black;
+                --msb-color: #888;
+                --main--transition: .3s;
+                --main--padding: 30px;
+                --main--padding2: 50px;
+                --main--padding3: 100px;
+                --main--box-shadow: 0 10px 25px rgba(2, 6, 23, .1);
+
+            }
+
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background-color: #f6f8fb;
+                color: #0f172a;
+                font: 16px / 1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            }
+
+
+            a {
+                text-decoration: none;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            @media (min-width: 768px) {
+                .container {
+                    width: 750px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .container {
+                    width: 970px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .container {
+                    width: 1170px;
+                }
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 350px 1fr;
+                /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+                gap: 40px;
+            }
+
+            @media (max-width: 900px) {
+                .container {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+
+
+            .sidebar {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                background-color: #0b8f8f;
+                padding: 30px 20px;
+                color: #ecfeff;
+                border-radius: 20px;
+
+            }
+
+            .sidebar .smallcard {
+                display: grid;
+                grid-template-columns: auto 1fr;
+            }
+
+
+
+
+            .sidebar .smallcard .namejob {
+                margin-left: 20px;
+            }
+
+            .sidebar .smallcard .namejob h2 {
+                font-size: 20px;
+                line-height: 1.1;
+            }
+
+            .sidebar .smallcard .namejob p {
+                line-height: 1.5;
+            }
+
+
+
+            .sidebar .photo {
+                align-self: center;
+                border-radius: 50%;
+                border: 3px solid;
+                width: 100px;
+                height: 100px;
+            }
+
+
+            .sidebar .box {
+                margin-top: 20px;
+                background: color-mix(in srgb, #f6f8fb 8%, #0000);
+                border: 1px solid rgba(255, 255, 255, .25);
+                border-radius: 12px;
+                padding: 14px;
+            }
+
+            .sidebar .box:last-child {
+                margin-bottom: 0;
+            }
+
+            .sidebar .box .title {
+                border-bottom: 1px solid rgba(255, 255, 255, .25);
+                padding-bottom: 10px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+
+            .sidebar .contact ul li,
+            .sidebar .projects ul li {
+                padding: 7px;
+                font-size: 17px;
+                /* أصفر ذهبي */
+
+            }
+
+
+
+            .sidebar .contact ul li i,
+            .sidebar .projects ul li i {
+                margin-right: 10px;
+            }
+
+            .sidebar .contact ul li a,
+            .sidebar .projects ul li a {
+                color: #FFD700;
+
+            }
+
+            .sidebar .contact ul li a:hover {
+                color: #FFA500;
+                /* برتقالي عند المرور */
+            }
+
+            .sidebar .language span {
+                display: inline-block;
+                margin: 5px 10px;
+                padding: 5px 10px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .sidebar .skills ul li {
+                display: inline-block;
+                text-transform: uppercase;
+                /* يحول النصوص لحروف كبيرة */
+                padding: 10px;
+                border-radius: 24px;
+                background: color-mix(in srgb, #f6f8fb 15%, #0000);
+                border: 1px solid rgba(255, 255, 255, .35);
+                margin: 5px 0;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .main {
+                margin-top: 20px;
+                display: grid;
+            }
+
+            .main .box {
+                padding: 20px;
+                margin: 10px 0;
+                background-color: white;
+                border-radius: 24px;
+                border: 1px solid #e5e7eb;
+                box-shadow: var(--main--box-shadow);
+
+            }
+
+
+
+            .main h3 {
+                font-size: 30px;
+                margin: 0 0 6px;
+                border-bottom: 3px solid #e5e7eb;
+                border-radius: 10px;
+                width: fit-content;
+            }
+
+
+
+            .main h4 {
+                font-size: 22px;
+
+                margin: 0 0 6px;
+            }
+
+            .main p {
+                font-size: 22px;
+                color: #0f172ad4;
+            }
+
+            .main .experience ol li {
+                display: block;
+                position: relative;
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            .main .experience ol li::before {
+                position: absolute;
+                content: "";
+                top: 18px;
+                left: -10px;
+                background-color: #0f172a;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+
+            .main .experience .child:not(:first-child) p {
+                margin: 0 0 0 30px;
+                font-size: 18px;
+            }
+
+            .main .experience .child:not(:last-child) {
+                border-bottom: 1px dashed #a3a3a3;
+            }
+
+
+            .main .boxes {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+
+
+            @media print {
+                .container {
+                    grid-template-columns: 1fr 1fr;
+                    margin: 0;
+                    width: 100% !important;
+                }
+            }
+        }
+
+        body {
+            direction: rtl;
+            font-family: "Cairo", sans-serif;
+            text-align: right;
+        }
+
+        .container {
+            direction: rtl;
+        }
+
+        .sidebar {
+            flex: 0 0 300px;
+        }
+
+        .main {
+            flex: 1;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" style="font-size: 20px; color: #0f172ad4;">English</a>
+
+    <div class="container">
+        <aside class="sidebar" aria-label="الشريط الجانبي">
+            <div class="smallcard">
+                <img class="photo" src="photo.jpg" alt="">
+                <div class="namejob">
+                    <h2 class="name">عبدالله دبوان</h2>
+                    <p class="jobtitle">مطور .NET ومطور واجهات ويب</p>
+                </div>
+            </div>
+            <div class="box contact">
+                <div class="title">التواصل</div>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:abdalahdabwan@gmail.com" aria-label="البريد الإلكتروني">
+                            abdalahdabwan@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+967779645062">+967779645062</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/966507620770">+966507620770</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/abdullahTIT">abdullahTIT</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/عبدالله-دبوان-84947137b" target="_blank">لينكدإن</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <a href="">رايد</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box language">
+                <div class="title">اللغات</div>
+                <span>العربية (اللغة الأم)</span>
+                <span>الإنجليزية (متقدم)</span>
+            </div>
+            <div class="box skills">
+                <div class="title">المهارات</div>
+                <ul>
+                    <li>C#</li>
+                    <li>SQL Server</li>
+                    <li>REST API</li>
+                    <li>.NET</li>
+                    <li>T-SQL</li>
+                    <li>C++</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git & GitHub</li>
+                    <li>هياكل البيانات</li>
+                </ul>
+            </div>
+            <div class="box projects">
+                <div class="title">المشاريع</div>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-school"></i>
+                        <a href="https://github.com/abdullahTIT/SchoolProject.git">مشروع المدرسة</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <a href="https://github.com/abdullahTIT/MixOfProjcets.git">عدة مشاريع</a>
+                    </li>
+                    <li class="has-submenu">
+                        مشاريع تصميم الويب <i class="fa-solid fa-paintbrush"></i>
+                        <ul class="designlist">
+                            <li><a href="https://abdullahtit.github.io/EX-html-css-Template3/">قالب 3</a></li>
+                            <li><a href="https://abdullahtit.github.io/EX-html-css-Template2/">قالب 2</a></li>
+                            <li><a href="https://abdullahtit.github.io/EX-html-css-Template1/">قالب 1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <div class="resume box">
+                <h3>السيرة الذاتية</h3>
+                <p>طالب برمجة شغوف بتطوير البرمجيات، متحمس لتعلم أحدث التقنيات وابتكار حلول عملية للمشاكل. أسعى للعمل
+                    ضمن فريق وتحسين مهاراتي باستمرار كمطور برمجيات محترف.</p>
+            </div>
+            <div class="focus box">
+                <h3>مجالات التركيز</h3>
+                <p>شغوف بتطوير البرمجيات الخلفية وتطوير واجهات الويب الأمامية.</p>
+            </div>
+            <div class="experience box">
+                <h3>الخبرة</h3>
+                <div class="child">
+                    <h4>C# .NET وتطوير الخلفية</h4>
+                    <ol>
+                        <li>تنفيذ مشاريع عملية على موقع programmingadvice.com لبناء المنطق ومهارات البرمجة.</li>
+                        <li>تطوير نظام إدارة مدرسة على مستوى الواجهة الخلفية مع قاعدة بيانات وهندسة متعددة الطبقات
+                            (تصميم الواجهة قيد التنفيذ).</li>
+                    </ol>
+                </div>
+                <div class="child">
+                    <h4>مصمم ويب</h4>
+                    <p>ممارسة مشاريع HTML وCSS على elzero.org لإنشاء واجهات مميزة.</p>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="education box">
+                    <h4>التعليم</h4>
+                    <p>دراسة على موقع programmingadvice.com، وإنهاء معظم الدورات، إلى جانب مواضيع متعددة في علوم
+                        الحاسوب، ودورات تطوير الواجهة الأمامية على elzero.org.</p>
+                </div>
+                <div class="certifications box">
+                    <h4>الشهادات</h4>
+                    <p>جميع الشهادات من موقع programmingadvice.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const img = document.querySelector('.photo');
+    img.onerror = () => {
+        img.style.display = 'none';
+    };
+</script>
+
+</html>
